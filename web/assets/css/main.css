@@ -1,0 +1,73 @@
+.Popover-body {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 2rem 4rem;
+  background: #454545;
+  color: white;
+  border-radius: 0.3rem; }
+
+.Popover-tipShape {
+  fill: #454545; }
+
+.menu-btn {
+  padding: 1.5rem null;
+  float: left;
+  margin-top: -4px;
+  color: #ffffff;
+  background-color: #0071bc;
+  font-size: 1.5rem;
+  width: 15%;
+  text-align: center; }
+  @media all and (850px) {
+    .menu-btn {
+      display: none; } }
+  .menu-btn:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #205493; }
+  .menu-btn:visited {
+    color: #ffffff; }
+
+.overlay {
+  background: #000000;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999; }
+  .overlay.is-visible {
+    visibility: visible; }
+
+.sidenav {
+  width: 250px;
+  border-right: 1px solid #aeb0b5;
+  padding: 5rem 3rem 3rem 3rem;
+  overflow: auto;
+  display: none;
+  z-index: -1; }
+  @media (max-width: 850px) {
+    .sidenav.menu-content {
+      background: #ffffff;
+      -webkit-overflow-scrolling: touch;
+      overflow-y: auto;
+      z-index: 999999;
+      display: block; } }
+  .lt-ie9 .sidenav {
+    width: 25%; }
+  .sidenav .usa-sidenav-sub_list {
+    display: none; }
+  @media screen and (min-width: 850px) {
+    .sidenav {
+      display: block; } }
+
+.visual-style .sidenav .visual-style-sublist {
+  display: block; }
+  .visual-style .sidenav .visual-style-sublist ul {
+    display: block; }
+
+.form-controls .sidenav .form-controls-sublist {
+  display: block; }
+
+.form-templates .sidenav .form-templates-sublist {
+  display: block; }
+
+.footers .sidenav .footers-sublist {
+  display: block; }
