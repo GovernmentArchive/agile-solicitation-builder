@@ -37,6 +37,7 @@
     "redux-persist": "^4.4.2",
     "redux-persist-migrate": "^4.0.1",
     "redux-thunk": "^2.2.0",
-    "reselect": "^2.5.4"
+    "reselect": "^2.5.4",
+    "uswds": "^1.0.0"
   }
 }
