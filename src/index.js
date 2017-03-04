@@ -4,6 +4,7 @@ import { Router, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import routes from './routes';
 import { store } from './store';
+import style from '../styles/main.scss';
 
 const title = 'Agile Solicitation Builder';
 

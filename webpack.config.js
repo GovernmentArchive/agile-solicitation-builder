@@ -1,3 +1,12 @@
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+function getDevTool() {
+    if (process.env.NODE_ENV !== 'production') {
+        return 'source-map'; //enables source map
+    }
+    return false;
+}
+
 module.exports = {
   entry: [
     'webpack-dev-server/client?http://localhost:8080',
@@ -5,12 +14,45 @@ module.exports = {
     './src/index.js'
   ],
   module: {
-    loaders: [{
-      test: /\.jsx?$/,
-      exclude: /node_modules/,
-      loader: 'react-hot-loader!babel-loader'
-    }]
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'react-hot-loader!babel-loader'
+      },
+      {
+        test: /\.scss$/,
+        loader: ExtractTextPlugin.extract('css-loader!sass-loader')
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=10000&minetype=application/font-woff'
+      },
+      {
+        test: /\.(ttf|eot)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader'
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      },
+      {
+        test: /\.svg/,
+        loader: 'svg-url'
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/i,
+        loader: 'url?limit=10000!img?progressive=true&-minimize'
+      }
+    ]
   },
+  devtool: getDevTool(),
+  plugins: [
+    new ExtractTextPlugin({
+      filename: 'styles/main.css',
+      allChunks: true
+    })
+  ],
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
