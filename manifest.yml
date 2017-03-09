@@ -1,9 +1,10 @@
 ---
 applications:
-- name: agile-solicitation-builder
-  memory: 512M
+- name: solicitation-builder-1
+  memory: 256M
+  disk: 360M
   instances: 1
-  host: agile-solicitation-builder
+  host: solicitation-builder-1
   domain: app.cloud.gov
   services:
-  - asb-prod-psql
+  - asb-1-prod-psql

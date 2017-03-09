@@ -1,1 +1,1 @@
-web: python server.py
+web: FLASK_DEBUG=1 python server.py
