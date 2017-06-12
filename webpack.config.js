@@ -37,12 +37,12 @@ module.exports = {
         loader: 'json-loader'
       },
       {
-        test: /\.svg/,
-        loader: 'svg-url'
+        test: /\.svg$/,
+        loader: 'svg-url-loader'
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
-        loader: 'url?limit=10000!img?progressive=true&-minimize'
+        loader: 'url-loader?limit=10000!img-loader?progressive=true&-minimize'
       }
     ]
   },

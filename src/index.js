@@ -1,10 +1,11 @@
+require('uswds');
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import routes from './routes';
 import { store } from './store';
-import style from '../styles/main.scss';
+import style from './styles/main.scss';
 
 const title = 'Agile Solicitation Builder';
 
